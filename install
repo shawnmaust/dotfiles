@@ -15,12 +15,8 @@ mkdir "$DOTFILES"
 cd "$DOTFILES" || exit
 
 git init
-git remote add origin https://github.com/shawnmaust/dotfiles.git
-git pull origin master
-
-# Swap origin so I can make edits easily
-git remote rm origin
 git remote add origin git@github.com:shawnmaust/dotfiles.git
+git pull origin master
 
 rm -rf \
   "$DOTCONFIG/nvim/init.vim" \
