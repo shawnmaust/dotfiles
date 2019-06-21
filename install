@@ -30,7 +30,7 @@ rm -rf \
   "$HOME/.zshrc"
 
 mkdir -p \
-  "$DOTCONFIG/"{gtk-3.0,nvim} \
+  "$DOTCONFIG/nvim" \
   "$DOTLOCAL" \
   "$HOME/.local/share/vim/"{swap,undo} \
   "$HOME/.vim/colors" \
