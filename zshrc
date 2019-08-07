@@ -68,3 +68,4 @@ $(vim_prompt)%F{blue}%~$(git_prompt)
 %F{244}%# %F{reset}'
 
 source $HOME/.fzf.zsh
+eval "$(rbenv init -)"
