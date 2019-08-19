@@ -69,3 +69,5 @@ $(vim_prompt)%F{blue}%~$(git_prompt)
 
 source $HOME/.fzf.zsh
 eval "$(rbenv init -)"
+export PATH="/usr/local/opt/varnish@4/bin:$PATH"
+export PATH="/usr/local/opt/varnish@4/sbin:$PATH"
