@@ -1,4 +1,4 @@
-https://github.com/logico-software/typewriter/blob/master/colors/typewriter.vim
+" https://github.com/logico-software/typewriter/blob/master/colors/typewriter.vim
 
 set background=light
 highlight clear
