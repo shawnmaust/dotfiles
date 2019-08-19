@@ -56,7 +56,7 @@ for INDEX in ${!ZSHPLUGS[*]}; do
 done
 
 VIMPLUGS=(
-  "Xuyuanp/nerdtree-git-plugin"
+  "scrooloose/nerdtree"
   "w0rp/ale"
   "editorconfig/editorconfig-vim"
   "junegunn/fzf.vim"
