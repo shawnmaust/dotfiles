@@ -56,12 +56,12 @@ for INDEX in ${!ZSHPLUGS[*]}; do
 done
 
 VIMPLUGS=(
+  "Xuyuanp/nerdtree-git-plugin"
   "w0rp/ale"
   "editorconfig/editorconfig-vim"
   "junegunn/fzf.vim"
   "sheerun/vim-polyglot"
   "jelera/vim-javascript-syntax"
-  "Quramy/vim-js-pretty-template"
 )
 
 for INDEX in ${!VIMPLUGS[*]}; do
@@ -70,6 +70,8 @@ for INDEX in ${!VIMPLUGS[*]}; do
 
   $GITCLONE "https://github.com/$VIMPLUG.git" "$HOME/.vim/pack/plugins/start/$PLUGDIR"
 done
+
+cp -r "$DOTFILES/vim/colors/" "$HOME/.vim/colors/"
 
 cd "$HOME" || exit
 rm -f "${HOME}/.zcompdump*"
