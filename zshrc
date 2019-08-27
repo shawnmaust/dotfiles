@@ -71,3 +71,4 @@ source $HOME/.fzf.zsh
 eval "$(rbenv init -)"
 export PATH="/usr/local/opt/varnish@4/bin:$PATH"
 export PATH="/usr/local/opt/varnish@4/sbin:$PATH"
+export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
