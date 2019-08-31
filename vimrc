@@ -1,3 +1,5 @@
+source ~/.vim/functions.vim
+
 syntax on
 set background=dark
 colorscheme typewriter-night

@@ -73,6 +73,7 @@ for INDEX in ${!VIMPLUGS[*]}; do
 done
 
 cp -r "$DOTFILES/vim/colors/" "$HOME/.vim/colors/"
+cp "$DOTFILES/vim/functions.vim" "$HOME/.vim/"
 
 cd "$HOME" || exit
 rm -f "${HOME}/.zcompdump*"
