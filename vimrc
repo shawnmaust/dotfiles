@@ -17,6 +17,7 @@ set ts=2 " tabstop
 
 set directory=~/.local/share/vim/swap,/tmp
 set undofile
+
 " hi SpellBad ctermfg=white ctermbg=red " Spell check highlighting
 " autocmd FileType gitcommit,markdown,text setl nosi spell
 
@@ -26,3 +27,4 @@ autocmd BufWritePre * :%s/\s\+$//e
 " au BufNewFile,BufRead *.{md,mdown,mkd,mkdn,markdown,mdwn} call DistractionFreeWriting()
 
 set rtp+=~/.fzf
+let g:goyo_width = 65

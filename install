@@ -57,11 +57,12 @@ done
 
 VIMPLUGS=(
   "scrooloose/nerdtree"
-  "w0rp/ale"
-  "editorconfig/editorconfig-vim"
-  "junegunn/fzf.vim"
+  "junegunn/goyo.vim"
+  "junegunn/limelight.vim"
   "sheerun/vim-polyglot"
   "jelera/vim-javascript-syntax"
+  "editorconfig/editorconfig-vim"
+  "w0rp/ale"
 )
 
 for INDEX in ${!VIMPLUGS[*]}; do
