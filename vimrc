@@ -28,4 +28,4 @@ autocmd BufWritePre * :%s/\s\+$//e
 " au BufNewFile,BufRead *.{md,mdown,mkd,mkdn,markdown,mdwn} call DistractionFreeWriting()
 
 set rtp+=~/.fzf
-let g:goyo_width = 65
+let g:goyo_width = 60
