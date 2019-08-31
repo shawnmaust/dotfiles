@@ -10,6 +10,7 @@ set si " smart indent
 set sts=2 " soft tab stop
 set sw=2 " shift width
 set ts=2 " tabstop
+set mouse=a " enable mouse
 
 " set ic " ignore case
 " set is " inc search
