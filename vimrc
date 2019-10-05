@@ -19,6 +19,7 @@ set mouse=a " enable mouse
 " set rnu " relative numbers
 
 set directory=~/.local/share/vim/swap,/tmp
+set undodir=~/.local/share/vim/undo,/tmp
 set undofile
 
 " hi SpellBad ctermfg=white ctermbg=red " Spell check highlighting
