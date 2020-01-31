@@ -1,5 +1,3 @@
-source ~/.vim/functions.vim
-
 syntax on
 colorscheme nord
 set background=dark
