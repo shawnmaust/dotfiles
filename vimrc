@@ -5,7 +5,6 @@ colorscheme nord
 set background=dark
 set ai " auto indent
 set et " expand tabs
-" set hls " highlighted search
 set hid " hidden buffers
 set nu " numbers
 set si " smart indent
@@ -13,24 +12,14 @@ set sts=2 " soft tab stop
 set sw=2 " shift width
 set ts=2 " tabstop
 set mouse=a " enable mouse
-
-" set ic " ignore case
-" set is " inc search
-" set rnu " relative numbers
-
 set directory=~/.local/share/vim/swap,/tmp
 set undodir=~/.local/share/vim/undo,/tmp
 set undofile
 
-" hi SpellBad ctermfg=white ctermbg=red " Spell check highlighting
-" autocmd FileType gitcommit,markdown,text setl nosi spell
-
 autocmd BufWritePre * :%s/\s\+$//e
 
-set rtp+=~/.fzf
-
 " Goyo Settings
-let g:goyo_width = 60
+let g:goyo_width = 66
 
 function! s:goyo_enter()
   colorscheme typewriter-night
@@ -64,4 +53,4 @@ autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
 " turn-on distraction free writing mode by default for markdown files
-au BufNewFile,BufRead *.{md,mdown,mkd,mkdn,markdown,mdwn} :Goyo
+" au BufNewFile,BufRead *.{md,mdown,mkd,mkdn,markdown,mdwn} :Goyo

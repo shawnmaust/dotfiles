@@ -6,8 +6,6 @@ export INCLUDES=$HOME/.local/share/dotfiles
 source $DOTFILES/env
 source $DOTFILES/aliases
 
-eval `dircolors $DOTFILES/dircolors`
-
 source $INCLUDES/zsh-completions/zsh-completions.plugin.zsh
 source $INCLUDES/zsh-history-substring-search/zsh-history-substring-search.zsh
 source $INCLUDES/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -57,17 +55,10 @@ git_prompt() {
   fi
 }
 
-vim_prompt() {
-  if [ ! -z $VIMRUNTIME ]; then
-    echo ":%F{green}sh ";
-  fi
-}
-
 PS1='
-$(vim_prompt)%F{blue}%~$(git_prompt)
+%F{blue}%~$(git_prompt)
 %F{244}%# %F{reset}'
 
-source $HOME/.fzf.zsh
 eval "$(rbenv init -)"
 export PATH="/usr/local/opt/varnish@4/bin:$PATH"
 export PATH="/usr/local/opt/varnish@4/sbin:$PATH"

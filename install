@@ -4,7 +4,6 @@ if [ -z "$HOME" ]; then echo "Seems you're \$HOMEless :("; exit 1; fi
 
 DOTCONFIG=$HOME/.config
 DOTFILES=$HOME/.dotfiles
-DOTFZF=$HOME/.fzf
 DOTLOCAL=$HOME/.local/share/dotfiles
 
 GITCLONE="git clone --depth=1"
@@ -41,9 +40,6 @@ ln -s "$DOTFILES/screenrc" "$HOME/.screenrc"
 ln -s "$DOTFILES/vimrc" "$HOME/.vimrc"
 ln -s "$DOTFILES/zshrc" "$HOME/.zshrc"
 
-$GITCLONE https://github.com/junegunn/fzf.git "$DOTFZF"
-"$DOTFZF/install" --key-bindings --completion --no-update-rc
-
 ZSHPLUGS=(
   "zsh-completions"
   "zsh-history-substring-search"
@@ -57,26 +53,20 @@ done
 
 VIMPLUGS=(
   "scrooloose/nerdtree"
+  "editorconfig/editorconfig-vim"
   "junegunn/goyo.vim"
   "junegunn/limelight.vim"
   "sheerun/vim-polyglot"
-  "jelera/vim-javascript-syntax"
-  "editorconfig/editorconfig-vim"
   "w0rp/ale"
 )
 
 for INDEX in ${!VIMPLUGS[*]}; do
   VIMPLUG="${VIMPLUGS[$INDEX]}"
   PLUGDIR=$(echo "$VIMPLUG" | cut -d '/' -f2)
-
   $GITCLONE "https://github.com/$VIMPLUG.git" "$HOME/.vim/pack/plugins/start/$PLUGDIR"
 done
 
 cp -r "$DOTFILES/vim/colors/" "$HOME/.vim/colors/"
-cp "$DOTFILES/vim/functions.vim" "$HOME/.vim/"
 
 cd "$HOME" || exit
 rm -f "${HOME}/.zcompdump*"
-
-echo
-echo "ENJOY! :)"
