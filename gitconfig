@@ -3,7 +3,7 @@
 	email = shawnmaust@gmail.com
 
 [github]
-	user = shawnmasut
+	user = shawnmaust
 
 [credential]
 	helper = cache --timeout=86400
