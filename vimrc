@@ -1,7 +1,7 @@
 source ~/.vim/functions.vim
 
 syntax on
-colorscheme default
+colorscheme nord
 set background=dark
 set ai " auto indent
 set et " expand tabs
