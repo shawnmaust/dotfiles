@@ -1,6 +1,16 @@
 [include]
   path = ~/.gitconfig.local
 
+[alias]
+  c = commit -am
+  s = status
+  co = checkout
+  cob = checkout -b
+  amend = commit --amend
+  hreset = reset --hard
+  df = diff --color --color-words --abbrev
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+
 [color]
   branch = auto
   diff = auto
