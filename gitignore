@@ -1,0 +1,6 @@
+.DS_Store
+Thumbs.db
+.gitconfig.local
+._*
+node_modules
+Desktop.ini

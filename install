@@ -35,6 +35,7 @@ mkdir -p \
 
 ln -s "$DOTFILES/bashrc" "$HOME/.bashrc"
 ln -s "$DOTFILES/gitconfig" "$HOME/.gitconfig"
+ln -s "$DOTFILES/gitignore" "$HOME/.gitignore"
 ln -s "$DOTFILES/init.vim" "$DOTCONFIG/nvim/init.vim"
 ln -s "$DOTFILES/screenrc" "$HOME/.screenrc"
 ln -s "$DOTFILES/vimrc" "$HOME/.vimrc"
