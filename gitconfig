@@ -1,37 +1,30 @@
-[user]
-	name = Shawn Maust
-	email = shawnmaust@gmail.com
-
-[github]
-	user = shawnmaust
-
-[credential]
-	helper = cache --timeout=86400
+[include]
+  path = ~/.gitconfig.local
 
 [color]
-	branch = auto
-	diff = auto
-	status = auto
+  branch = auto
+  diff = auto
+  status = auto
 
 [core]
-	editor = vim
+  editor = vim
 
 [diff]
-	compactionHeuristic = true
-	rename = copy
-	check = true
+  compactionHeuristic = true
+  rename = copy
+  check = true
 
 [pager]
-	color = true
+  color = true
 
 [push]
-	default = simple
+  default = simple
 
 [pull]
-	rebase = true
+  rebase = true
 
 [commit]
   verbose = true
 
 [help]
-	autocorrect = 1
+  autocorrect = 1
