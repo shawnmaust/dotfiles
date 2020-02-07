@@ -17,7 +17,6 @@ git clone git@github.com:shawnmaust/dotfiles.git .
 
 rm -rf \
   "$DOTCONFIG/nvim/init.vim" \
-  "$DOTFZF" \
   "$DOTLOCAL" \
   "$HOME/.bashrc" \
   "$HOME/.gitconfig" \
@@ -43,7 +42,6 @@ ln -s "$DOTFILES/zshrc" "$HOME/.zshrc"
 
 ZSHPLUGS=(
   "zsh-completions"
-  "zsh-history-substring-search"
   "zsh-syntax-highlighting"
 )
 

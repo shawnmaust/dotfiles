@@ -7,7 +7,6 @@ source $DOTFILES/env
 source $DOTFILES/aliases
 
 source $INCLUDES/zsh-completions/zsh-completions.plugin.zsh
-source $INCLUDES/zsh-history-substring-search/zsh-history-substring-search.zsh
 source $INCLUDES/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 HISTFILE=$HOME/.zsh_history
