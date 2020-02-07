@@ -38,10 +38,10 @@ setopt inc_append_history
 setopt interactivecomments
 setopt share_history
 
-bindkey -v
-
+bindkey -v # vim bindings
 bindkey '^a' beginning-of-line
 bindkey '^e' end-of-line
+bindkey '^R' history-incremental-search-backward
 
 git_prompt() {
   BRANCH=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/*\(.*\)/\1/')
