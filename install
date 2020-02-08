@@ -51,10 +51,10 @@ for INDEX in ${!ZSHPLUGS[*]}; do
 done
 
 VIMPLUGS=(
-  "scrooloose/nerdtree"
   "editorconfig/editorconfig-vim"
   "junegunn/goyo.vim"
   "junegunn/limelight.vim"
+  "scrooloose/nerdtree"
   "sheerun/vim-polyglot"
   "w0rp/ale"
 )
