@@ -20,7 +20,7 @@ rm -rf \
   "$DOTLOCAL" \
   "$HOME/.bashrc" \
   "$HOME/.gitconfig" \
-  "$HOME/.screenrc" \
+  "$HOME/.gitignore" \
   "$HOME/.vim" \
   "$HOME/.vimrc" \
   "$HOME/.zshrc"
