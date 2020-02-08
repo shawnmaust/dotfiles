@@ -2,7 +2,7 @@
 
 export DOTFILES=$HOME/.dotfiles
 
-source "$DOTFILES/env"
+source "$DOTFILES/profile"
 source "$DOTFILES/aliases"
 
 bind 'set completion-ignore-case on'

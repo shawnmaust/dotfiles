@@ -22,6 +22,7 @@ rm -rf \
   "$HOME/.bash_profile" \
   "$HOME/.gitconfig" \
   "$HOME/.gitignore" \
+  "$HOME/.profile" \
   "$HOME/.vim" \
   "$HOME/.vimrc" \
   "$HOME/.zshrc"
@@ -38,7 +39,7 @@ ln -s "$DOTFILES/bash_profile" "$HOME/.bash_profile"
 ln -s "$DOTFILES/gitconfig" "$HOME/.gitconfig"
 ln -s "$DOTFILES/gitignore" "$HOME/.gitignore"
 ln -s "$DOTFILES/init.vim" "$DOTCONFIG/nvim/init.vim"
-ln -s "$DOTFILES/screenrc" "$HOME/.screenrc"
+ln -s "$DOTFILES/profile" "$HOME/.profile"
 ln -s "$DOTFILES/vimrc" "$HOME/.vimrc"
 ln -s "$DOTFILES/zshrc" "$HOME/.zshrc"
 

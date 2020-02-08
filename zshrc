@@ -3,7 +3,7 @@
 export DOTFILES=$HOME/.dotfiles
 export INCLUDES=$HOME/.local/share/dotfiles
 
-source $DOTFILES/env
+source $DOTFILES/profile
 source $DOTFILES/aliases
 
 source $INCLUDES/zsh-completions/zsh-completions.plugin.zsh
@@ -57,8 +57,3 @@ git_prompt() {
 PS1='
 %F{blue}%~$(git_prompt)
 %F{244}%# %F{reset}'
-
-eval "$(rbenv init -)"
-export PATH="/usr/local/opt/varnish@4/bin:$PATH"
-export PATH="/usr/local/opt/varnish@4/sbin:$PATH"
-export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
