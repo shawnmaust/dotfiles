@@ -19,6 +19,9 @@ autocmd BufWritePre * :%s/\s\+$//e
 " Goyo Settings
 let g:goyo_width = 66
 
+" Limelight Settings
+let g:limelight_conceal_ctermfg = 8
+
 function! s:goyo_enter()
   set noshowcmd
   set scrolloff=999
