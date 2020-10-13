@@ -13,6 +13,9 @@ alias du='du -h'
 # Apps
 alias o='open'
 
+# Bundle
+alias be='bundle exec'
+
 # Directories
 alias home='cd ~'
 alias root='cd /'
