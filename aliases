@@ -24,6 +24,7 @@ alias ...='cd ..; cd ..'
 alias ....='cd ..; cd ..; cd ..'
 
 # Vim
+alias vi='nvim'
 alias vim='nvim'
 
 # `ls` after `cd`
