@@ -1,4 +1,3 @@
-if [[ -s ~/.private-profile ]] ; then source ~/.private-profile ; fi
 
 export CLICOLOR=1
 export EDITOR=vim
@@ -16,13 +15,4 @@ PATH=$PATH:/opt/local/sbin
 PATH=$PATH:/usr/sbin
 PATH=$PATH:/sbin
 
-PATH=$PATH:/usr/local/opt/varnish@4/bin
-PATH=$PATH:/usr/local/opt/varnish@4/sbin
-PATH=$PATH:/usr/local/opt/postgresql@9.6/bin
-PATH=$PATH:/usr/local/opt/postgresql@9.6/sbin
-
-PATH=$PATH:~/.rbenv/bin
-PATH=$PATH:~/.rbenv/bundle
-# export PATH
-
-eval "$(rbenv init -)"
+if [[ -s ~/.profile.local ]] ; then source ~/.profile.local ; fi
