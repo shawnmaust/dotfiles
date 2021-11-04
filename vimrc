@@ -13,43 +13,5 @@ set mouse=a " enable mouse
 set directory=~/.local/share/vim/swap,/tmp
 set undodir=~/.local/share/vim/undo,/tmp
 set undofile
+autocmd BufWritePre * :%s/\s\+$//e " clear trailing spaces
 
-autocmd BufWritePre * :%s/\s\+$//e
-
-" Goyo Settings
-let g:goyo_width = 66
-
-" Limelight Settings
-let g:limelight_conceal_ctermfg = 8
-
-function! s:goyo_enter()
-  set noshowcmd
-  set scrolloff=999
-  set linebreak
-  Limelight
-  let b:quitting = 0
-  let b:quitting_bang = 0
-  autocmd QuitPre <buffer> let b:quitting = 1
-  cabbrev <buffer> q! let b:quitting_bang = 1 <bar> q!
-endfunction
-
-function! s:goyo_leave()
-  Limelight!
-  set showmode
-  set showcmd
-  set scrolloff=5
-  " Quit Vim if this is the only remaining buffer
-  if b:quitting && len(filter(range(1, bufnr('$')), 'buflisted(v:val)')) == 1
-    if b:quitting_bang
-      qa!
-    else
-      qa
-    endif
-  endif
-endfunction
-
-autocmd! User GoyoEnter nested call <SID>goyo_enter()
-autocmd! User GoyoLeave nested call <SID>goyo_leave()
-
-" turn-on distraction free writing mode by default for markdown files
-" au BufNewFile,BufRead *.{md,mdown,mkd,mkdn,markdown,mdwn} :Goyo
