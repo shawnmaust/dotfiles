@@ -19,7 +19,6 @@ rm -rf \
   "$DOTCONFIG/nvim/init.vim" \
   "$DOTLOCAL" \
   "$HOME/.bashrc" \
-  "$HOME/.bash_profile" \
   "$HOME/.gitconfig" \
   "$HOME/.gitignore" \
   "$HOME/.profile" \
@@ -35,7 +34,6 @@ mkdir -p \
   "$HOME/.vim/pack/plugins/start"
 
 ln -s "$DOTFILES/bashrc" "$HOME/.bashrc"
-ln -s "$DOTFILES/bash_profile" "$HOME/.bash_profile"
 ln -s "$DOTFILES/gitconfig" "$HOME/.gitconfig"
 ln -s "$DOTFILES/gitignore" "$HOME/.gitignore"
 ln -s "$DOTFILES/init.vim" "$DOTCONFIG/nvim/init.vim"
@@ -55,11 +53,9 @@ done
 
 VIMPLUGS=(
   "editorconfig/editorconfig-vim"
-  "junegunn/goyo.vim"
-  "junegunn/limelight.vim"
   "scrooloose/nerdtree"
   "sheerun/vim-polyglot"
-  "w0rp/ale"
+  "dense-analysis/ale"
 )
 
 for INDEX in ${!VIMPLUGS[*]}; do
