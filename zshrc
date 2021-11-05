@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-export DOTFILES=$HOME/.dotfiles
+export DOTFILES=$HOME/dotfiles
 export INCLUDES=$HOME/.local/share/dotfiles
 
 source $DOTFILES/profile

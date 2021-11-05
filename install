@@ -2,8 +2,8 @@
 
 if [ -z "$HOME" ]; then echo "Seems you're \$HOMEless :("; exit 1; fi
 
+DOTFILES=$HOME/dotfiles
 DOTCONFIG=$HOME/.config
-DOTFILES=$HOME/.dotfiles
 DOTLOCAL=$HOME/.local/share/dotfiles
 GITCLONE="git clone --depth=1"
 
