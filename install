@@ -5,15 +5,9 @@ if [ -z "$HOME" ]; then echo "Seems you're \$HOMEless :("; exit 1; fi
 DOTCONFIG=$HOME/.config
 DOTFILES=$HOME/.dotfiles
 DOTLOCAL=$HOME/.local/share/dotfiles
-
 GITCLONE="git clone --depth=1"
 
-cd "$HOME" || exit
-rm -rf "$DOTFILES"
-mkdir "$DOTFILES"
-cd "$DOTFILES" || exit
-
-git clone git@github.com:shawnmaust/dotfiles.git .
+# Remove existing files
 
 rm -rf \
   "$DOTCONFIG/nvim/init.vim" \
@@ -26,12 +20,16 @@ rm -rf \
   "$HOME/.vimrc" \
   "$HOME/.zshrc"
 
+# Create folders
+
 mkdir -p \
   "$DOTCONFIG/nvim" \
   "$DOTLOCAL" \
   "$HOME/.local/share/vim/"{swap,undo} \
   "$HOME/.vim/colors" \
   "$HOME/.vim/pack/plugins/start"
+
+# Symlink files
 
 ln -s "$DOTFILES/bashrc" "$HOME/.bashrc"
 ln -s "$DOTFILES/gitconfig" "$HOME/.gitconfig"
@@ -41,8 +39,9 @@ ln -s "$DOTFILES/profile" "$HOME/.profile"
 ln -s "$DOTFILES/vimrc" "$HOME/.vimrc"
 ln -s "$DOTFILES/zshrc" "$HOME/.zshrc"
 
+# Install zsh plugins
+
 ZSHPLUGS=(
-  "zsh-completions"
   "zsh-syntax-highlighting"
 )
 
@@ -50,6 +49,10 @@ for INDEX in ${!ZSHPLUGS[*]}; do
   ZSHPLUG="${ZSHPLUGS[$INDEX]}"
   $GITCLONE "https://github.com/zsh-users/$ZSHPLUG.git" "$DOTLOCAL/$ZSHPLUG"
 done
+
+rm -f "${HOME}/.zcompdump*"
+
+# Install vim plugins & colors
 
 VIMPLUGS=(
   "editorconfig/editorconfig-vim"
@@ -66,5 +69,3 @@ done
 
 cp -r "$DOTFILES/vim/colors/" "$HOME/.vim/colors/"
 
-cd "$HOME" || exit
-rm -f "${HOME}/.zcompdump*"

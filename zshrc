@@ -6,7 +6,6 @@ export INCLUDES=$HOME/.local/share/dotfiles
 source $DOTFILES/profile
 source $DOTFILES/aliases
 
-source $INCLUDES/zsh-completions/zsh-completions.plugin.zsh
 source $INCLUDES/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 HISTFILE=$HOME/.zsh_history
