@@ -27,6 +27,11 @@ alias ....='cd ..; cd ..; cd ..'
 alias vi='nvim'
 alias vim='nvim'
 
+# Yalc
+
+# yalc update people
+alias yup='yarn run build && yalc publish && cd ../people && yalc update && bin/webpack; cd -'
+
 # Products
 
 alias people='cd ~/Code/people'
