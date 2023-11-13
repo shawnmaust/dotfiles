@@ -8,9 +8,14 @@
   cob = checkout -b
   amend = commit --amend
   hreset = reset --hard
+  rbl = rebase -i - # rebase on last
+  rbm = rebase -i main # rebase on main
+  mgs = co staging && git pull && git merge -
+  push = push --set-upstream origin $(git_current_branch)
   df = diff --color --color-words --abbrev
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
-  cleanup = ! "git fetch -p && git for-each-ref --format '%(refname:short) %(upstream:track)' | awk '$2 == \"[gone]\" {print $1}' | xargs -r git branch -D"
+  fixup = "!git log origin/main..HEAD -n 20 --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup"
+  cleanup = "!git fetch -p && git for-each-ref --format '%(refname:short) %(upstream:track)' | awk '$2 == \"[gone]\" {print $1}' | xargs -r git branch -D"
 
 [color]
   branch = auto
@@ -38,11 +43,14 @@
 [commit]
   verbose = true
 
+[rebase]
+  autosquash = true
+
 [help]
   autocorrect = 1
 
 [filter "lfs"]
-  clean = git-lfs clean -- %f
-  smudge = git-lfs smudge -- %f
-  process = git-lfs filter-process
-  required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
