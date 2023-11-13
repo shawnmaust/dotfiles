@@ -30,6 +30,7 @@ fi
 # pco
 export PATH=$HOME/pco-box/bin:$PATH
 export PCO_ROOT=$HOME/Code/pco/bin
+source $HOME/pco-box/env.sh
 
 if [[ -d $PCO_ROOT ]]; then
   eval "$(~/Code/pco/bin/pco init -)"
