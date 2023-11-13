@@ -59,4 +59,7 @@ PS1='
 %F{blue}%~$(git_prompt)
 %F{244}%# %F{reset}'
 
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
