@@ -27,6 +27,13 @@ else
   echo "Warning: rbenv not found"
 fi
 
+# nvm
+export NVM_DIR="$HOME/.nvm"
+# This loads nvm
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"
+# This loads nvm bash_completion
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"
+
 # pco
 export PATH=$HOME/pco-box/bin:$PATH
 export PCO_ROOT=$HOME/Code/pco/bin
