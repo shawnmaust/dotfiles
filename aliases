@@ -27,6 +27,12 @@ alias ....='cd ..; cd ..; cd ..'
 alias vi='nvim'
 alias vim='nvim'
 
+# Products
+
+alias people='cd ~/Code/people'
+alias accounts='cd ~/Code/accounts'
+alias tapestry='cd ~/Code/tapestry-react'
+
 # `ls` after `cd`
 function cd {
   builtin cd "$@" && ls
