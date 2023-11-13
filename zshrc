@@ -1,5 +1,7 @@
 #!/usr/bin/env zsh
 
+[[ $TERM == "dumb" ]] && unsetopt zle && PS1='$ ' && return
+
 export DOTFILES=$HOME/dotfiles
 export INCLUDES=$HOME/.local/share/dotfiles
 
@@ -56,3 +58,5 @@ git_prompt() {
 PS1='
 %F{blue}%~$(git_prompt)
 %F{244}%# %F{reset}'
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -16,3 +16,5 @@ RESET="$(tput sgr0)"
 PS1="
 \[$BLUE\w\]
 \[$GREY\]$ \[$RESET\]"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
