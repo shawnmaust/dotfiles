@@ -17,6 +17,7 @@ PATH=$PATH:/sbin
 
 # rbenv
 export RBENV_ROOT=$HOME/.rbenv
+# PATH=~/.rbenv/shims:$PATH
 PATH=$PATH:~/.rbenv/bin
 PATH=$PATH:~/.rbenv/bundle
 
