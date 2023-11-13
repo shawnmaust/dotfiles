@@ -15,3 +15,5 @@ set undodir=~/.local/share/vim/undo,/tmp
 set undofile
 autocmd BufWritePre * :%s/\s\+$//e " clear trailing spaces
 
+" let g:prettier#autoformat = 1
+" let g:prettier#autoformat_require_pragma = 0
