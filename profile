@@ -15,18 +15,6 @@ PATH=$PATH:/opt/local/sbin
 PATH=$PATH:/usr/sbin
 PATH=$PATH:/sbin
 
-# rbenv
-export RBENV_ROOT=$HOME/.rbenv
-# PATH=~/.rbenv/shims:$PATH
-PATH=$PATH:~/.rbenv/bin
-PATH=$PATH:~/.rbenv/bundle
-
-if [[ -d $RBENV_ROOT ]]; then
-  eval "$(rbenv init -)"
-else
-  echo "Warning: rbenv not found"
-fi
-
 # nvm
 export NVM_DIR="$HOME/.nvm"
 # This loads nvm
