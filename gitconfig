@@ -8,6 +8,7 @@
   cob = checkout -b
   amend = commit --amend
   fix = commit --fixup
+  fpush = push --force-with-lease
   hreset = reset --hard
   rbl = rebase -i - # rebase on last
   rbm = rebase -i main # rebase on main
