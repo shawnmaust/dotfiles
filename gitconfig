@@ -38,6 +38,7 @@
 
 [push]
   default = simple
+  autoSetupRemote = true
 
 [pull]
   rebase = true
@@ -47,6 +48,7 @@
 
 [rebase]
   autosquash = true
+  updateRefs = true
 
 [help]
   autocorrect = 1
