@@ -33,5 +33,6 @@ else
   echo "Warning: pco/bin not found"
 fi
 
+if [[ -s ~/.cargo/env ]] ; then source ~/.cargo/env ; fi
 if [[ -s ~/.profile.local ]] ; then source ~/.profile.local ; fi
 if [[ -s ~/.private ]] ; then source ~/.private ; fi
