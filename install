@@ -25,6 +25,7 @@ rm -rf \
 mkdir -p \
   "$DOTCONFIG/nvim" \
   "$DOTLOCAL" \
+  "$HOME/.emacs.d" \
   "$HOME/.local/share/vim/"{swap,undo} \
   "$HOME/.vim/colors" \
   "$HOME/.vim/pack/plugins/start"
@@ -32,6 +33,7 @@ mkdir -p \
 # Symlink files
 
 ln -s "$DOTFILES/bashrc" "$HOME/.bashrc"
+ln -s "$DOTFILES/emacs.d/init.el" "$HOME/.emacs.d/init.el"
 ln -s "$DOTFILES/gitconfig" "$HOME/.gitconfig"
 ln -s "$DOTFILES/gitignore" "$HOME/.gitignore"
 ln -s "$DOTFILES/init.vim" "$DOTCONFIG/nvim/init.vim"
