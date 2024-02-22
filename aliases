@@ -41,6 +41,11 @@ alias tapestry='cd ~/Code/tapestry-react'
 # Cloudbox
 alias cloud='pco cloud-box'
 
+# Brew
+unalias brew 2>/dev/null
+brew_user=$(stat -f "%Su" $(which brew))
+alias brew='sudo -Hu '$brew_user' brew'
+
 # `ls` after `cd`
 function cd {
   builtin cd "$@" && ls
