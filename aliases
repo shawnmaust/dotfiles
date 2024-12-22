@@ -33,18 +33,12 @@ alias vim='nvim'
 alias yup='yarn run build && yalc publish && cd ../people && yalc update && bin/webpack; cd -'
 
 # Products
-
 alias people='cd ~/Code/people'
 alias accounts='cd ~/Code/accounts'
 alias tapestry='cd ~/Code/tapestry-react'
 
 # Cloudbox
 alias cloud='pco cloud-box'
-
-# Brew
-unalias brew 2>/dev/null
-brew_user=$(stat -f "%Su" $(which brew))
-alias brew='sudo -Hu '$brew_user' brew'
 
 # `ls` after `cd`
 function cd {
