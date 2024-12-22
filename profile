@@ -15,22 +15,19 @@ PATH=$PATH:/opt/local/sbin
 PATH=$PATH:/usr/sbin
 PATH=$PATH:/sbin
 
-# nvm
-export NVM_DIR="$HOME/.nvm"
-# This loads nvm
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"
-# This loads nvm bash_completion
-[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"
-
 # pco
-export PATH=$HOME/pco-box/bin:$PATH
 export PCO_ROOT=$HOME/Code/pco/bin
-source $HOME/pco-box/env.sh
 
 if [[ -d $PCO_ROOT ]]; then
+  export PATH=$HOME/pco-box/bin:$PATH
+  source $HOME/pco-box/env.sh
   eval "$(~/Code/pco/bin/pco init -)"
+  eval "$(devbox global shellenv --init-hook)"
+  eval "$(direnv hook zsh)"
 else
-  echo "Warning: pco/bin not found"
+  PATH=$PATH:/opt/homebrew/bin
+  PATH=$PATH:/opt/homebrew/sbin
+  eval $(/opt/homebrew/bin/brew shellenv)
 fi
 
 if [[ -s ~/.cargo/env ]] ; then source ~/.cargo/env ; fi
